@@ -7,6 +7,7 @@ import { SpecialistsSection } from "./components/SpecialistsSection";
 import { TestimonialsSection } from "./components/TestimonialsSection";
 import { BookingSection } from "./components/BookingSection";
 import { Footer } from "./components/Footer";
+import JuridicalChatbot from "./components/JuridicalChatbot";
 
 export default function App() {
   const [isDark, setIsDark] = useState(false);
@@ -52,6 +53,7 @@ export default function App() {
         <BookingSection />
       </main>
       <Footer />
+      <JuridicalChatbot />
     </div>
   );
 }

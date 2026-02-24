@@ -23,7 +23,7 @@ export function BookingSection() {
     e.preventDefault();
     setIsSubmitting(true);
     setTimeout(() => {
-      alert("Agendamento enviado com sucesso! Em breve entraremos em contato.");
+      alert("Solicitação enviada com sucesso! Em breve um de nossos advogados entrará em contato.");
       setIsSubmitting(false);
     }, 1500);
   };
@@ -44,18 +44,18 @@ export function BookingSection() {
           >
             <div className="inline-block mb-6">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm">
-                Agende sua Consulta
+                Agende sua Consulta Jurídica
               </span>
             </div>
 
             <h2 className="text-4xl lg:text-5xl mb-6">
-              Comece sua jornada para uma vida mais{" "}
-              <span className="text-primary">saudável</span>
+              Proteja seus direitos com uma{" "}
+              <span className="text-primary">assessoria especializada</span>
             </h2>
 
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
               Preencha o formulário ao lado e nossa equipe entrará em contato
-              para confirmar seu agendamento. Estamos prontos para cuidar de você.
+              para confirmar sua consulta. Estamos prontos para defender seus interesses.
             </p>
 
             {/* Contact Info Cards */}
@@ -64,22 +64,22 @@ export function BookingSection() {
                 {
                   icon: MapPin,
                   title: "Endereço",
-                  content: "Av. Paulista, 1000 - São Paulo, SP",
+                  content: "Av. Paulista, 2000 - São Paulo, SP",
                 },
                 {
                   icon: PhoneIcon,
                   title: "Telefone",
-                  content: "(11) 3000-0000 | (11) 99999-9999",
+                  content: "(11) 99999-9999",
                 },
                 {
                   icon: MailIcon,
                   title: "E-mail",
-                  content: "contato@vitamedical.com.br",
+                  content: "contato@justicaedireito.com.br",
                 },
                 {
                   icon: ClockIcon,
                   title: "Horário de Atendimento",
-                  content: "Segunda a Sexta: 7h - 22h | Sábado: 8h - 18h",
+                  content: "Segunda a Sexta: 9h - 18h",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -105,21 +105,32 @@ export function BookingSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-12 p-6 rounded-2xl bg-accent border border-accent-foreground/20"
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ x: 8 }}
+              className="flex items-start gap-4 p-4 rounded-xl hover:bg-secondary/50 transition-all"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-accent-foreground/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">🚨</span>
-                </div>
-                <div>
-                  <h3 className="font-medium mb-2 text-accent-foreground">
-                    Emergências 24h
-                  </h3>
-                  <p className="text-sm text-accent-foreground/80">
-                    Para casos urgentes, ligue: <strong>(11) 3000-0000</strong>
-                  </p>
-                </div>
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <MailIcon className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="font-medium mb-1">E-mail</div>
+                <div className="text-sm text-muted-foreground">contato@justicaedireito.com.br</div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              whileHover={{ x: 8 }}
+              className="flex items-start gap-4 p-4 rounded-xl hover:bg-secondary/50 transition-all"
+            >
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <ClockIcon className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="font-medium mb-1">Horário de Atendimento</div>
+                <div className="text-sm text-muted-foreground">Segunda a Sexta: 9h - 18h</div>
               </div>
             </motion.div>
           </motion.div>

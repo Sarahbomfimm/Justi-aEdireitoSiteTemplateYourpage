@@ -9,40 +9,40 @@ export function SpecialistsSection() {
   const specialists = [
     {
       name: "Dr. Carlos Mendes",
-      specialty: "Cardiologia",
-      image: "https://images.unsplash.com/photo-1755189118414-14c8dacdb082?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzA5MDEwODd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      credentials: "CRM 12345 | PhD em Cardiologia",
+      specialty: "Direito Civil",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBpbiUyMHN1aXR8ZW58MXx8fHwxNzcwOTUzMTAwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      credentials: "OAB/SP 123.456 | Especialista em Contratos",
       experience: "25 anos de experiência",
       rating: 4.9,
     },
     {
       name: "Dra. Ana Silva",
-      specialty: "Neurologia",
-      image: "https://images.unsplash.com/photo-1632054226752-b1b40867f7a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkb2N0b3IlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcwOTUzMTAwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      credentials: "CRM 23456 | Especialista em Neurociência",
+      specialty: "Direito do Trabalho",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBsYXd5ZXIlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcwOTUzMTAwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      credentials: "OAB/SP 234.567 | Mestre em Direito Social",
       experience: "18 anos de experiência",
       rating: 5.0,
     },
     {
       name: "Dr. Pedro Costa",
-      specialty: "Ortopedia",
-      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzA5NTMxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      credentials: "CRM 34567 | Cirurgião Ortopédico",
+      specialty: "Direito Penal",
+      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwbGF3eWVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcwOTUzMTAwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      credentials: "OAB/SP 345.678 | Especialista em Direito Criminal",
       experience: "20 anos de experiência",
       rating: 4.8,
     },
     {
       name: "Dra. Julia Almeida",
-      specialty: "Pediatria",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxmZW1hbGUlMjBkb2N0b3J8ZW58MHx8fHwxNzcwOTUzMTAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      credentials: "CRM 45678 | Pediatra Intensivista",
+      specialty: "Direito de Família",
+      image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzA5NTMxMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      credentials: "OAB/SP 456.789 | Especialista em Mediação",
       experience: "15 anos de experiência",
       rating: 4.9,
     },
   ];
 
   return (
-    <section id="especialistas" ref={ref} className="py-32 relative overflow-hidden">
+    <section id="equipe" ref={ref} className="py-32 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
@@ -56,7 +56,7 @@ export function SpecialistsSection() {
             className="inline-block mb-6"
           >
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm">
-              Nossos Especialistas
+              Nossa Equipe
             </span>
           </motion.div>
 
@@ -66,7 +66,7 @@ export function SpecialistsSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl lg:text-5xl mb-6"
           >
-            Equipe de{" "}
+            Profissionais de{" "}
             <span className="text-primary">excelência</span>
           </motion.h2>
 
@@ -76,8 +76,8 @@ export function SpecialistsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground"
           >
-            Profissionais reconhecidos nacional e internacionalmente, dedicados
-            ao seu bem-estar.
+            Advogados altamente qualificados, prontos para oferecer a melhor 
+            estratégia jurídica para seus interesses.
           </motion.p>
         </div>
 

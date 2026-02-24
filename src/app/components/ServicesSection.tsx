@@ -1,18 +1,18 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import {
-  Stethoscope,
-  Heart,
-  Brain,
-  Baby,
-  Eye,
-  Bone,
-  Activity,
-  Smile,
-  Microscope,
-  Pill,
-  UserPlus,
-  Dna,
+  Scale,
+  Gavel,
+  Briefcase,
+  Users,
+  Building,
+  Home,
+  FileText,
+  ShieldCheck,
+  Globe,
+  Lock,
+  Landmark,
+  Handshake,
 } from "lucide-react";
 
 export function ServicesSection() {
@@ -21,75 +21,75 @@ export function ServicesSection() {
 
   const services = [
     {
-      icon: Stethoscope,
-      title: "Clínica Geral",
-      description: "Atendimento completo para cuidados preventivos e tratamento de doenças comuns",
+      icon: Scale,
+      title: "Direito Civil",
+      description: "Resolução de conflitos e assessoria em contratos, obrigações e responsabilidade civil.",
       color: "from-blue-500/10 to-cyan-500/10",
     },
     {
-      icon: Heart,
-      title: "Cardiologia",
-      description: "Diagnóstico e tratamento de doenças cardiovasculares com tecnologia avançada",
+      icon: Gavel,
+      title: "Direito Penal",
+      description: "Defesa técnica especializada em processos criminais e inquéritos policiais.",
       color: "from-red-500/10 to-pink-500/10",
     },
     {
-      icon: Brain,
-      title: "Neurologia",
-      description: "Especialistas em distúrbios do sistema nervoso e tratamentos neurológicos",
+      icon: Briefcase,
+      title: "Direito do Trabalho",
+      description: "Assessoria completa para empresas e empregados em questões laborais.",
       color: "from-purple-500/10 to-indigo-500/10",
     },
     {
-      icon: Baby,
-      title: "Pediatria",
-      description: "Cuidados especializados para o desenvolvimento saudável das crianças",
+      icon: Users,
+      title: "Direito de Família",
+      description: "Mediação e processos de divórcio, guarda, inventário e partilha de bens.",
       color: "from-green-500/10 to-emerald-500/10",
     },
     {
-      icon: Eye,
-      title: "Oftalmologia",
-      description: "Cuidados completos para a saúde dos seus olhos e visão",
+      icon: Building,
+      title: "Direito Imobiliário",
+      description: "Segurança jurídica em transações imobiliárias, locações e regularizações.",
       color: "from-cyan-500/10 to-blue-500/10",
     },
     {
-      icon: Bone,
-      title: "Ortopedia",
-      description: "Tratamento de lesões e doenças do sistema musculoesquelético",
+      icon: Landmark,
+      title: "Direito Tributário",
+      description: "Planejamento tributário e defesa em execuções fiscais e autos de infração.",
       color: "from-orange-500/10 to-amber-500/10",
     },
     {
-      icon: Activity,
-      title: "Check-up Completo",
-      description: "Avaliação médica completa com exames laboratoriais e de imagem",
+      icon: Globe,
+      title: "Direito Digital",
+      description: "Consultoria em LGPD, crimes cibernéticos e termos de uso para plataformas.",
       color: "from-teal-500/10 to-green-500/10",
     },
     {
-      icon: Smile,
-      title: "Dermatologia",
-      description: "Tratamentos estéticos e clínicos para a saúde da sua pele",
+      icon: ShieldCheck,
+      title: "Compliance",
+      description: "Implementação de programas de integridade e ética corporativa.",
       color: "from-pink-500/10 to-rose-500/10",
     },
     {
-      icon: Microscope,
-      title: "Laboratório",
-      description: "Exames laboratoriais com resultados rápidos e precisos",
+      icon: Handshake,
+      title: "Mediação",
+      description: "Resolução alternativa de conflitos visando acordos rápidos e eficazes.",
       color: "from-indigo-500/10 to-purple-500/10",
     },
     {
-      icon: Pill,
-      title: "Farmácia Clínica",
-      description: "Orientação farmacêutica e medicamentos de qualidade",
+      icon: Home,
+      title: "Direito do Consumidor",
+      description: "Defesa dos direitos do consumidor em face de práticas abusivas.",
       color: "from-emerald-500/10 to-teal-500/10",
     },
     {
-      icon: UserPlus,
-      title: "Medicina Preventiva",
-      description: "Programas personalizados para manutenção da sua saúde",
+      icon: Lock,
+      title: "Propriedade Intelectual",
+      description: "Registro de marcas, patentes e proteção de direitos autorais.",
       color: "from-blue-500/10 to-indigo-500/10",
     },
     {
-      icon: Dna,
-      title: "Genética Médica",
-      description: "Avaliação genética e aconselhamento personalizado",
+      icon: FileText,
+      title: "Direito Administrativo",
+      description: "Assessoria em licitações e defesas junto a órgãos públicos.",
       color: "from-violet-500/10 to-purple-500/10",
     },
   ];
@@ -109,7 +109,7 @@ export function ServicesSection() {
             className="inline-block mb-6"
           >
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm">
-              Nossos Serviços
+              Nossas Áreas de Atuação
             </span>
           </motion.div>
 
@@ -119,8 +119,8 @@ export function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl lg:text-5xl mb-6"
           >
-            Atendimento completo para sua{" "}
-            <span className="text-primary">saúde</span>
+            Soluções jurídicas{" "}
+            <span className="text-primary">especializadas</span>
           </motion.h2>
 
           <motion.p
@@ -129,8 +129,8 @@ export function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground"
           >
-            Oferecemos uma ampla gama de especialidades médicas com
-            profissionais altamente qualificados e infraestrutura moderna.
+            Oferecemos suporte jurídico abrangente em diversas áreas, sempre buscando 
+            a melhor estratégia para o seu caso.
           </motion.p>
         </div>
 

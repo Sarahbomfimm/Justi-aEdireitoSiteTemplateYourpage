@@ -1,6 +1,6 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import { ArrowRight, Shield, Award, Clock } from "lucide-react";
+import { ArrowRight, Shield, Award, Gavel, Scale, Briefcase } from "lucide-react";
 
 interface HeroSectionProps {
   onBookClick: () => void;
@@ -19,7 +19,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
     <section
       id="inicio"
       ref={ref}
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-28 overflow-hidden"
     >
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 via-background to-accent/20" />
@@ -40,7 +40,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
               className="inline-block mb-6"
             >
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm backdrop-blur-sm border border-primary/20">
-                🏥 Centro de Excelência Médica
+                ⚖️ Excelência em Assessoria Jurídica
               </span>
             </motion.div>
 
@@ -51,9 +51,9 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
               className="text-5xl lg:text-7xl mb-6 tracking-tight"
             >
-              Cuidado que{" "}
+              Justiça que{" "}
               <span className="text-primary relative inline-block">
-                transforma
+                protege
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="12"
@@ -70,7 +70,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
                   />
                 </svg>
               </span>{" "}
-              vidas
+              seu futuro
             </motion.h1>
 
             <motion.p
@@ -80,9 +80,9 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl"
             >
-              Excelência médica aliada à tecnologia de ponta. Nossa equipe
-              multidisciplinar está pronta para oferecer o melhor cuidado
-              personalizado para você.
+              Defendemos seus direitos com ética, agilidade e excelência técnica. 
+              Conte com uma equipe especializada para solucionar suas questões jurídicas 
+              mais complexas.
             </motion.p>
 
             <motion.div
@@ -98,7 +98,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
                 onClick={onBookClick}
                 className="group flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-xl shadow-xl hover:shadow-2xl transition-all"
               >
-                <span className="text-lg">Agendar Consulta</span>
+                <span className="text-lg">Consulta Jurídica</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
@@ -108,7 +108,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 px-8 py-4 border-2 border-border rounded-xl hover:bg-secondary/50 transition-all"
               >
-                <span className="text-lg">Conheça Nossa Clínica</span>
+                <span className="text-lg">Conheça Nosso Escritório</span>
               </motion.a>
             </motion.div>
 
@@ -118,12 +118,12 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-              className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-border"
+              className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-border"
             >
               {[
-                { icon: Shield, label: "Anos de Experiência", value: "20+" },
-                { icon: Award, label: "Especialistas", value: "50+" },
-                { icon: Clock, label: "Atendimento 24/7", value: "100%" },
+                { icon: Shield, label: "Processos Vencidos", value: "1500+" },
+                { icon: Gavel, label: "Advogados", value: "15+" },
+                { icon: Scale, label: "Taxa de Sucesso", value: "95%" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -149,31 +149,13 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1762625570087-6d98fca29531?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtZWRpY2FsJTIwY2xpbmljJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzcwOTUzMDk5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Clínica Moderna"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXclMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzA5NTMwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Escritório de Advocacia"
                 className="w-full h-full object-cover"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
-            
-            {/* Floating card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="absolute -bottom-8 -left-8 bg-card p-6 rounded-2xl shadow-2xl border border-border backdrop-blur-sm"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-2xl">⭐</span>
-                </div>
-                <div>
-                  <div className="text-2xl mb-1">4.9/5.0</div>
-                  <div className="text-sm text-muted-foreground">Avaliação dos Pacientes</div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

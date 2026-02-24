@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Heart, Facebook, Instagram, Linkedin, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { Scale, Facebook, Instagram, Linkedin, Twitter, MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,15 +10,15 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <Heart className="w-6 h-6 text-primary-foreground" />
+                <Scale className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="text-xl">Vita Medical</h3>
-                <p className="text-xs text-muted-foreground">Centro de Excelência</p>
+                <h3 className="text-xl">Justiça & Direito</h3>
+                <p className="text-xs text-muted-foreground">Assessoria Jurídica</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Cuidando da sua saúde com excelência, tecnologia e humanização há
+              Defendendo seus direitos com excelência, ética e comprometimento há
               mais de 20 anos.
             </p>
             <div className="flex gap-3">
@@ -44,7 +44,7 @@ export function Footer() {
                 "Início",
                 "Sobre Nós",
                 "Serviços",
-                "Especialistas",
+                "Equipe",
                 "Depoimentos",
                 "Contato",
               ].map((link) => (
@@ -63,15 +63,15 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-medium mb-6">Especialidades</h4>
+            <h4 className="font-medium mb-6">Áreas de Atuação</h4>
             <ul className="space-y-3">
               {[
-                "Cardiologia",
-                "Neurologia",
-                "Pediatria",
-                "Ortopedia",
-                "Dermatologia",
-                "Check-up",
+                "Direito Civil",
+                "Direito Penal",
+                "Direito do Trabalho",
+                "Direito de Família",
+                "Direito Imobiliário",
+                "Direito Tributário",
               ].map((service) => (
                 <li key={service}>
                   <motion.a
@@ -93,19 +93,19 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  Av. Paulista, 1000<br />São Paulo, SP
+                  Av. Paulista, 2000<br />São Paulo, SP
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  (11) 3000-0000<br />(11) 99999-9999
+                  (11) 99999-9999
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  contato@vitamedical.com.br
+                  contato@justicaedireito.com.br
                 </span>
               </li>
             </ul>

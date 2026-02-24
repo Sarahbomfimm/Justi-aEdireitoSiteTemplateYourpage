@@ -9,49 +9,49 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       name: "Maria Santos",
-      role: "Paciente - Cardiologia",
+      role: "Cliente - Direito Civil",
       content:
-        "Excepcional! O atendimento é humanizado, a estrutura é impecável e os profissionais são extremamente competentes. Me senti segura e bem cuidada em todos os momentos.",
+        "Excepcional! O atendimento é pautado na ética, a estrutura é impecável e os advogados são extremamente competentes. Me senti segura e bem orientada em todos os momentos.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
     },
     {
       name: "João Oliveira",
-      role: "Paciente - Ortopedia",
+      role: "Cliente - Direito do Trabalho",
       content:
-        "Após minha cirurgia, recebi todo o suporte necessário. A equipe médica é atenciosa e a infraestrutura da clínica é de primeiro mundo. Recomendo de olhos fechados!",
+        "Recebi todo o suporte necessário em minha causa trabalhista. A equipe jurídica é atenciosa e a infraestrutura do escritório é de primeiro mundo. Recomendo fortemente!",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
     },
     {
       name: "Ana Costa",
-      role: "Paciente - Pediatria",
+      role: "Cliente - Direito de Família",
       content:
-        "Meus filhos são atendidos aqui desde pequenos. A Dra. Julia é maravilhosa, sempre muito atenciosa e carinhosa. A clínica tem um ambiente acolhedor e seguro.",
+        "Fui atendida com muito respeito e profissionalismo em um momento difícil. A Dra. Julia foi maravilhosa, sempre muito atenciosa. O escritório tem um ambiente acolhedor.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
     },
     {
       name: "Roberto Lima",
-      role: "Paciente - Neurologia",
+      role: "Cliente - Direito Empresarial",
       content:
-        "Profissionais extremamente qualificados e tecnologia de ponta. Fui diagnosticado rapidamente e o tratamento foi eficaz. Gratidão a toda equipe da Vita Medical!",
+        "Profissionais extremamente qualificados. Minha empresa recebeu consultoria de ponta e as soluções foram rápidas e eficazes. Gratidão a toda equipe do escritório!",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
     },
     {
       name: "Fernanda Alves",
-      role: "Paciente - Dermatologia",
+      role: "Cliente - Direito Imobiliário",
       content:
-        "Atendimento impecável do início ao fim. Os tratamentos são modernos e os resultados superaram minhas expectativas. A clínica é linda e muito bem organizada.",
+        "Atendimento impecável do início ao fim. As orientações foram precisas e os resultados superaram minhas expectativas. O escritório é muito bem organizado.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop",
     },
     {
       name: "Carlos Rodrigues",
-      role: "Paciente - Check-up",
+      role: "Cliente - Consultoria Preventiva",
       content:
-        "Faço meu check-up anual aqui e sempre sou muito bem atendido. Os exames são realizados com rapidez e precisão. Sinto que estou em boas mãos.",
+        "Busco assessoria preventiva aqui e sempre sou muito bem atendido. As análises contratuais são realizadas com rapidez e precisão. Sinto que meus interesses estão protegidos.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
     },
@@ -82,7 +82,7 @@ export function TestimonialsSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl lg:text-5xl mb-6"
           >
-            O que nossos pacientes{" "}
+            O que nossos clientes{" "}
             <span className="text-primary">dizem</span>
           </motion.h2>
 
@@ -92,7 +92,7 @@ export function TestimonialsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground"
           >
-            A satisfação dos nossos pacientes é a nossa maior conquista.
+            A satisfação dos nossos clientes é a nossa maior conquista.
           </motion.p>
         </div>
 
@@ -169,7 +169,7 @@ export function TestimonialsSection() {
           className="grid sm:grid-cols-3 gap-8 mt-20 pt-20 border-t border-border"
         >
           {[
-            { value: "15.000+", label: "Pacientes Atendidos" },
+            { value: "15.000+", label: "Clientes Atendidos" },
             { value: "4.9/5.0", label: "Avaliação Média" },
             { value: "98%", label: "Taxa de Satisfação" },
           ].map((stat, index) => (
