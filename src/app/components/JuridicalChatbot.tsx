@@ -132,10 +132,7 @@ const JuridicalChatbot = () => {
       {/* Botão Flutuante */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 text-white rounded-full p-3 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300 z-40 flex items-center justify-center"
-        style={{
-          background: 'linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%)',
-        }}
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-[#2d5a8c] to-[#1a3a5c] hover:from-[#1a3a5c] hover:to-[#0f1f35] text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 z-40 flex items-center justify-center"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
@@ -143,62 +140,36 @@ const JuridicalChatbot = () => {
         transition={{ delay: 0.5 }}
         title="Abrir chatbot jurídico"
       >
-        {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />}
+        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>
 
       {/* Janela do Chat */}
       <motion.div
-        className="fixed bottom-0 right-0 z-40 sm:bottom-20 sm:right-6 w-full h-screen sm:h-auto sm:w-96 sm:max-h-96 rounded-t-lg sm:rounded-lg shadow-2xl flex flex-col overflow-hidden"
-        style={{
-          backgroundColor: 'var(--card)',
-          color: 'var(--card-foreground)',
-          pointerEvents: isOpen ? 'auto' : 'none',
-        }}
+        className="fixed bottom-24 right-6 w-96 max-h-96 bg-white rounded-lg shadow-2xl flex flex-col z-40 overflow-hidden border border-[#e8f0f7]"
         initial={{ opacity: 0, y: 20, scale: 0.95 }}
         animate={isOpen ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.95 }}
         transition={{ duration: 0.3 }}
+        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
       >
         {/* Header */}
-        <div
-          className="text-white p-3 sm:p-4"
-          style={{
-            background: 'linear-gradient(135deg, var(--accent) 0%, #2d5a8c 100%)',
-          }}
-        >
-          <h3 className="font-bold text-base sm:text-lg">Triagem Jurídica</h3>
-          <p className="text-xs sm:text-sm opacity-90">Assistente de atendimento 24/7</p>
+        <div className="bg-gradient-to-r from-[#2d5a8c] to-[#1a3a5c] text-white p-4">
+          <h3 className="font-bold text-lg">Triagem Jurídica</h3>
+          <p className="text-sm text-blue-100">Assistente de atendimento 24/7</p>
         </div>
 
         {/* Messages */}
-        <div
-          className="flex-1 overflow-y-auto p-2 sm:p-4 space-y-2 sm:space-y-3"
-          style={{
-            backgroundColor: 'var(--secondary)',
-          }}
-        >
+        <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-[#f5f6f9]">
           {messages.map((msg) => (
             <div
               key={msg.id}
               className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[70%] sm:max-w-xs px-3 sm:px-4 py-2 rounded-lg whitespace-pre-wrap font-medium text-sm sm:text-base ${
+                className={`max-w-xs px-4 py-2 rounded-lg whitespace-pre-wrap font-medium ${
                   msg.sender === 'user'
-                    ? 'rounded-br-none'
-                    : 'rounded-bl-none'
+                    ? 'bg-[#2d5a8c] text-white rounded-br-none text-base'
+                    : 'bg-[#e8f0f7] text-[#1a1f2e] rounded-bl-none text-base'
                 }`}
-                style={
-                  msg.sender === 'user'
-                    ? {
-                        backgroundColor: 'var(--accent)',
-                        color: 'white',
-                      }
-                    : {
-                        backgroundColor: 'var(--card)',
-                        color: 'var(--card-foreground)',
-                        border: '1px solid var(--border)',
-                      }
-                }
               >
                 {msg.text}
               </div>
@@ -208,36 +179,22 @@ const JuridicalChatbot = () => {
         </div>
 
         {/* Input */}
-        <div
-          className="border-t p-2 sm:p-3 flex gap-1 sm:gap-2"
-          style={{
-            backgroundColor: 'var(--card)',
-            borderColor: 'var(--border)',
-          }}
-        >
+        <div className="border-t border-[#e8f0f7] p-3 bg-white flex gap-2">
           <input
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Sua resposta..."
-            className="flex-1 px-2 sm:px-3 py-2 border-2 rounded-lg focus:outline-none focus:ring-2 text-sm sm:text-base font-medium"
-            style={{
-              borderColor: 'var(--accent)',
-              backgroundColor: 'var(--background)',
-              color: 'var(--foreground)',
-            }}
+            placeholder="Digite sua resposta..."
+            className="flex-1 px-3 py-2 border-2 border-[#e8f0f7] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a574] text-base text-[#1a1f2e] font-medium placeholder:text-gray-500 bg-white"
             disabled={currentStep >= steps.length}
           />
           <button
             onClick={handleSendMessage}
             disabled={currentStep >= steps.length}
-            className="text-white px-2 sm:px-4 py-2 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
-            style={{
-              backgroundColor: 'var(--accent)',
-            }}
+            className="bg-[#2d5a8c] hover:bg-[#1a3a5c] text-white px-4 py-2 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
           >
-            <Send className="w-4 h-4 sm:w-5 sm:h-5" />
+            <Send className="w-4 h-4" />
           </button>
         </div>
       </motion.div>

@@ -4,8 +4,8 @@ import { Scale, Facebook, Instagram, Linkedin, Twitter, MapPin, Phone, Mail } fr
 export function Footer() {
   return (
     <footer className="relative border-t border-border bg-card">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
+      <div className="container mx-auto px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -116,7 +116,7 @@ export function Footer() {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © 2026 Your Page. Todos os direitos reservados. Desenvolvido com <span className="text-primary">❤️</span> para Escritório Jurídico.
+              © 2026 Your Page. Todos os direitos reservados.
             </p>
             <div className="flex gap-6">
               <motion.a

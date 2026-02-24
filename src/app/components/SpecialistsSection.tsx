@@ -46,7 +46,7 @@ export function SpecialistsSection() {
       {/* Background decoration */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.div
@@ -82,7 +82,7 @@ export function SpecialistsSection() {
         </div>
 
         {/* Specialists Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {specialists.map((specialist, index) => (
             <motion.div
               key={specialist.name}

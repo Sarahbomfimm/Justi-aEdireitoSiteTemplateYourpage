@@ -34,8 +34,8 @@ export function BookingSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
       <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Info */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -143,11 +143,11 @@ export function BookingSection() {
           >
             <form
               onSubmit={handleSubmit}
-              className="p-4 sm:p-6 lg:p-10 rounded-2xl sm:rounded-3xl bg-card border border-border shadow-2xl"
+              className="p-8 lg:p-10 rounded-3xl bg-card border border-border shadow-2xl"
             >
-              <h3 className="text-xl sm:text-2xl mb-6 sm:mb-8">Preencha seus dados</h3>
+              <h3 className="text-2xl mb-8">Preencha seus dados</h3>
 
-              <div className="space-y-4 sm:space-y-6">
+              <div className="space-y-6">
                 {/* Name */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -203,7 +203,7 @@ export function BookingSection() {
                 </motion.div>
 
                 {/* Date and Time */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -211,11 +211,11 @@ export function BookingSection() {
                   >
                     <label className="block text-sm mb-2">Data preferida</label>
                     <div className="relative">
-                      <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                      <Calendar className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground flex-shrink-0" />
                       <input
                         type="date"
                         required
-                        className="w-full pl-12 pr-4 py-3.5 bg-secondary/50 border border-border rounded-xl focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-3.5 bg-secondary/50 border border-border rounded-lg sm:rounded-xl text-sm sm:text-base focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                       />
                     </div>
                   </motion.div>
@@ -227,11 +227,11 @@ export function BookingSection() {
                   >
                     <label className="block text-sm mb-2">Horário preferido</label>
                     <div className="relative">
-                      <Clock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                      <Clock className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground flex-shrink-0" />
                       <input
                         type="time"
                         required
-                        className="w-full pl-12 pr-4 py-3.5 bg-secondary/50 border border-border rounded-xl focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-3.5 bg-secondary/50 border border-border rounded-lg sm:rounded-xl text-sm sm:text-base focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                       />
                     </div>
                   </motion.div>

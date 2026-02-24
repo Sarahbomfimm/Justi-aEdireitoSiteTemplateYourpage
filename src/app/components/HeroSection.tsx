@@ -28,8 +28,8 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
             <motion.div
@@ -49,7 +49,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-6 tracking-tight"
+              className="text-5xl lg:text-7xl mb-6 tracking-tight"
             >
               Justiça que{" "}
               <span className="text-primary relative inline-block">
@@ -78,7 +78,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed max-w-xl"
+              className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl"
             >
               Defendemos seus direitos com ética, agilidade e excelência técnica. 
               Conte com uma equipe especializada para solucionar suas questões jurídicas 
@@ -96,19 +96,19 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
                 whileHover={{ scale: 1.05, boxShadow: "0 12px 32px rgba(10, 74, 110, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
                 onClick={onBookClick}
-                className="group flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-2 sm:py-4 bg-primary text-primary-foreground rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all text-sm sm:text-base"
+                className="group flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-xl shadow-xl hover:shadow-2xl transition-all"
               >
-                <span>Consulta Jurídica</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                <span className="text-lg">Consulta Jurídica</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
               <motion.a
                 href="#sobre"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-4 sm:px-8 py-2 sm:py-4 border-2 border-border rounded-lg sm:rounded-xl hover:bg-secondary/50 transition-all text-sm sm:text-base"
+                className="flex items-center gap-2 px-8 py-4 border-2 border-border rounded-xl hover:bg-secondary/50 transition-all"
               >
-                <span>Conheça Nosso Escritório</span>
+                <span className="text-lg">Conheça Nosso Escritório</span>
               </motion.a>
             </motion.div>
 
