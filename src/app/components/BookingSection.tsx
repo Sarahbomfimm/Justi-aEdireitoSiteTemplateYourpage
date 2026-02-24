@@ -143,11 +143,11 @@ export function BookingSection() {
           >
             <form
               onSubmit={handleSubmit}
-              className="p-8 lg:p-10 rounded-3xl bg-card border border-border shadow-2xl"
+              className="p-4 sm:p-6 lg:p-10 rounded-2xl sm:rounded-3xl bg-card border border-border shadow-2xl"
             >
-              <h3 className="text-2xl mb-8">Preencha seus dados</h3>
+              <h3 className="text-xl sm:text-2xl mb-6 sm:mb-8">Preencha seus dados</h3>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {/* Name */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -203,7 +203,7 @@ export function BookingSection() {
                 </motion.div>
 
                 {/* Date and Time */}
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
