@@ -34,8 +34,8 @@ export function AboutSection() {
       {/* Background decoration */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image Grid */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -43,7 +43,7 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
               <div className="space-y-6">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
                   <img

@@ -132,7 +132,7 @@ const JuridicalChatbot = () => {
       {/* Botão Flutuante */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 z-40 flex items-center justify-center"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 text-white rounded-full p-3 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300 z-40 flex items-center justify-center"
         style={{
           background: 'linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%)',
         }}
@@ -143,12 +143,12 @@ const JuridicalChatbot = () => {
         transition={{ delay: 0.5 }}
         title="Abrir chatbot jurídico"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />}
       </motion.button>
 
       {/* Janela do Chat */}
       <motion.div
-        className="fixed bottom-24 right-6 w-96 max-h-96 rounded-lg shadow-2xl flex flex-col z-40 overflow-hidden"
+        className="fixed bottom-0 right-0 z-40 sm:bottom-20 sm:right-6 w-full h-screen sm:h-auto sm:w-96 sm:max-h-96 rounded-t-lg sm:rounded-lg shadow-2xl flex flex-col overflow-hidden"
         style={{
           backgroundColor: 'var(--card)',
           color: 'var(--card-foreground)',
@@ -160,18 +160,18 @@ const JuridicalChatbot = () => {
       >
         {/* Header */}
         <div
-          className="text-white p-4"
+          className="text-white p-3 sm:p-4"
           style={{
             background: 'linear-gradient(135deg, var(--accent) 0%, #2d5a8c 100%)',
           }}
         >
-          <h3 className="font-bold text-lg">Triagem Jurídica</h3>
-          <p className="text-sm opacity-90">Assistente de atendimento 24/7</p>
+          <h3 className="font-bold text-base sm:text-lg">Triagem Jurídica</h3>
+          <p className="text-xs sm:text-sm opacity-90">Assistente de atendimento 24/7</p>
         </div>
 
         {/* Messages */}
         <div
-          className="flex-1 overflow-y-auto p-4 space-y-3"
+          className="flex-1 overflow-y-auto p-2 sm:p-4 space-y-2 sm:space-y-3"
           style={{
             backgroundColor: 'var(--secondary)',
           }}
@@ -182,10 +182,10 @@ const JuridicalChatbot = () => {
               className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-xs px-4 py-2 rounded-lg whitespace-pre-wrap font-medium ${
+                className={`max-w-[70%] sm:max-w-xs px-3 sm:px-4 py-2 rounded-lg whitespace-pre-wrap font-medium text-sm sm:text-base ${
                   msg.sender === 'user'
-                    ? 'rounded-br-none text-base'
-                    : 'rounded-bl-none text-base'
+                    ? 'rounded-br-none'
+                    : 'rounded-bl-none'
                 }`}
                 style={
                   msg.sender === 'user'
@@ -209,7 +209,7 @@ const JuridicalChatbot = () => {
 
         {/* Input */}
         <div
-          className="border-t p-3 flex gap-2"
+          className="border-t p-2 sm:p-3 flex gap-1 sm:gap-2"
           style={{
             backgroundColor: 'var(--card)',
             borderColor: 'var(--border)',
@@ -220,8 +220,8 @@ const JuridicalChatbot = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Digite sua resposta..."
-            className="flex-1 px-3 py-2 border-2 rounded-lg focus:outline-none focus:ring-2 text-base font-medium"
+            placeholder="Sua resposta..."
+            className="flex-1 px-2 sm:px-3 py-2 border-2 rounded-lg focus:outline-none focus:ring-2 text-sm sm:text-base font-medium"
             style={{
               borderColor: 'var(--accent)',
               backgroundColor: 'var(--background)',
@@ -232,12 +232,12 @@ const JuridicalChatbot = () => {
           <button
             onClick={handleSendMessage}
             disabled={currentStep >= steps.length}
-            className="text-white px-4 py-2 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
+            className="text-white px-2 sm:px-4 py-2 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
             style={{
               backgroundColor: 'var(--accent)',
             }}
           >
-            <Send className="w-4 h-4" />
+            <Send className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
       </motion.div>
