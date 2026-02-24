@@ -22,6 +22,7 @@ const JuridicalChatbot = () => {
     descricao: ''
   });
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const steps = [
     {
@@ -92,6 +93,9 @@ const JuridicalChatbot = () => {
     addUserMessage(userResponse);
     setInputValue('');
 
+    // Dar focus na textarea
+    textareaRef.current?.focus();
+
     // Validar e armazenar resposta
     const currentStepData = steps[currentStep];
     const updatedInfo = { ...userInfo, [currentStepData.key]: userResponse };
@@ -105,6 +109,8 @@ const JuridicalChatbot = () => {
       } else {
         finalizarTriagem(updatedInfo);
       }
+      // Dar focus novamente após a resposta do bot
+      textareaRef.current?.focus();
     }, 500);
   };
 
@@ -179,22 +185,28 @@ const JuridicalChatbot = () => {
         </div>
 
         {/* Input */}
-        <div className="border-t border-[#e8f0f7] p-3 bg-white flex gap-2">
-          <input
-            type="text"
+        <div className="border-t border-[#e8f0f7] p-3 bg-white flex flex-col gap-2">
+          <textarea
+            ref={textareaRef}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Digite sua resposta..."
-            className="flex-1 px-3 py-2 border-2 border-[#e8f0f7] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a574] text-base text-[#1a1f2e] font-medium placeholder:text-gray-500 bg-white"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && e.ctrlKey) {
+                handleSendMessage();
+              }
+            }}
+            placeholder="Digite sua resposta... (Ctrl+Enter para enviar)"
+            rows={3}
+            className="flex-1 px-3 py-2 border-2 border-[#e8f0f7] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a574] text-base text-[#1a1f2e] font-medium placeholder:text-gray-500 bg-white resize-none"
             disabled={currentStep >= steps.length}
           />
           <button
             onClick={handleSendMessage}
             disabled={currentStep >= steps.length}
-            className="bg-[#2d5a8c] hover:bg-[#1a3a5c] text-white px-4 py-2 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
+            className="self-end bg-[#2d5a8c] hover:bg-[#1a3a5c] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium text-sm"
           >
             <Send className="w-4 h-4" />
+            Enviar
           </button>
         </div>
       </motion.div>

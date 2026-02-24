@@ -1,0 +1,334 @@
+/* 
+  RESPONSIVE DESIGN GUIDELINES
+  Mobile-First Approach
+  Breakpoints: 
+  - Mobile: < 640px
+  - Tablet: 640px - 1024px
+  - Desktop: > 1024px
+*/
+
+/* BASE - Mobile First */
+:root {
+  /* Tipografia responsiva mobile */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+
+  /* Espaçamento responsivo mobile */
+  --spacing-xs: 0.5rem;       /* 8px */
+  --spacing-sm: 1rem;         /* 16px */
+  --spacing-md: 1.5rem;       /* 24px */
+  --spacing-lg: 2rem;         /* 32px */
+  --spacing-xl: 2.5rem;       /* 40px */
+  --spacing-2xl: 3rem;        /* 48px */
+
+  /* Largura máxima do container */
+  --max-container-width: 100%;
+  --container-padding: 1rem;
+}
+
+/* TABLET - 640px e acima */
+@media (min-width: 640px) {
+  :root {
+    --font-size-xl: 1.375rem;  /* 22px */
+    --font-size-2xl: 1.875rem; /* 30px */
+    --font-size-3xl: 2.25rem;  /* 36px */
+    --font-size-4xl: 2.75rem;  /* 44px */
+
+    --spacing-lg: 2.5rem;      /* 40px */
+    --spacing-xl: 3rem;        /* 48px */
+    --spacing-2xl: 3.5rem;     /* 56px */
+
+    --max-container-width: 95%;
+    --container-padding: 1.5rem;
+  }
+}
+
+/* DESKTOP - 1024px e acima */
+@media (min-width: 1024px) {
+  :root {
+    --font-size-xl: 1.5rem;    /* 24px */
+    --font-size-2xl: 2rem;     /* 32px */
+    --font-size-3xl: 2.5rem;   /* 40px */
+    --font-size-4xl: 3rem;     /* 48px */
+
+    --spacing-lg: 3rem;        /* 48px */
+    --spacing-xl: 3.5rem;      /* 56px */
+    --spacing-2xl: 4rem;       /* 64px */
+
+    --max-container-width: 1280px;
+    --container-padding: 2rem;
+  }
+}
+
+/* ESTILOS BASE RESPONSIVOS */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CONTAINER RESPONSIVO */
+.container {
+  width: 100%;
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* IMAGENS RESPONSIVAS */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* VÍDEOS RESPONSIVOS */
+iframe,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LAYOUT GRID RESPONSIVO */
+.grid-auto {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid-auto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-auto {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* FLEXBOX RESPONSIVO */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .flex-responsive {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+  }
+}
+
+/* BOTÕES RESPONSIVOS */
+button,
+.btn {
+  font-size: var(--font-size-base);
+  padding: 0.75rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  button,
+  .btn {
+    padding: 0.875rem 2rem;
+  }
+}
+
+/* HEADING RESPONSIVO */
+h1 {
+  font-size: var(--font-size-2xl);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+@media (min-width: 640px) {
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* INPUTS RESPONSIVOS */
+input,
+textarea,
+select {
+  font-size: var(--font-size-base);
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  input,
+  textarea,
+  select {
+    padding: 0.875rem 1.25rem;
+  }
+}
+
+/* ESPAÇAMENTO RESPONSIVO */
+.section-padding {
+  padding: var(--spacing-lg) var(--container-padding);
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: var(--spacing-xl) var(--container-padding);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: var(--spacing-2xl) var(--container-padding);
+  }
+}
+
+/* GAP RESPONSIVO */
+.gap-responsive {
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .gap-responsive {
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gap-responsive {
+    gap: var(--spacing-xl);
+  }
+}
+
+/* MARGIN RESPONSIVO */
+.my-responsive {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .my-responsive {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .my-responsive {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+/* VISIBILIDADE RESPONSIVA */
+@media (max-width: 639px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+/* OTIMIZAÇÕES PARA MOBILE */
+@media (max-width: 639px) {
+  /* Menu hamburger */
+  .navbar {
+    flex-direction: column;
+  }
+
+  /* Reduz animações em mobile para melhor performance */
+  * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.2s !important;
+  }
+
+  /* Touch targets mínimos */
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Reduz tamanho de carrossel em mobile */
+  .carousel-item {
+    height: auto;
+    max-height: 300px;
+  }
+}
+
+/* OTIMIZAÇÕES PARA TABLET */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* OTIMIZAÇÕES PARA DESKTOP */
+@media (min-width: 1024px) {
+  body {
+    font-size: var(--font-size-base);
+  }
+
+  /* Ativa efeitos hover apenas em desktop */
+  *:hover {
+    transition: all 0.3s ease;
+  }
+}
